@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharedive</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/bower_components/angularjs/angular.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM BASIC STYLES-->
+    <link href="/assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="/assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navba navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img id="logo" src="~/Content/Images/sub_icon_vector.png" style="float: left" width="50" height="50" />
+                    <span>SHAREDIVE</span>
+                </a>
+            </div>
+            <div class="header-right">                
+                <a href="#" class="btn btn-warning" title="New Message"><b>12 </b><i class="fa fa-bell fa-2x"></i></a>
+                <a href="#" class="btn btn-success" title="New Task"><b>1 </b><i class="fa fa-envelope-o fa-2x"></i></a>
+                <a href="#" class="btn btn-danger" title="Logout"><i class="fa fa-sign-out fa-2x"></i></a>
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <div class="user-img-div">
+                            <img src="~/Content/Images/Users/user.jpg" class="img-thumbnail" />
+
+                            <div class="inner-text">
+                                Nicola Zirilli
+                                <br />
+                                <small>Last Login : 1 Day Ago </small>
+                            </div>
+                        </div>
+                        <div class="form-group input-group" style="margin-bottom: 0;">
+                            <input type="text" style="border: 0; border-radius: 0;" class="form-control" placeholder="Enter Keywords" />
+                            <span class="input-group-btn">
+                                <a class="btn btn-primary" style="background-color: #4380B8; border: 0; border-radius: 0; height: 34px;" href="#">
+                                    <i class="fa fa-gear"></i>&nbsp;&nbsp;SEARCH
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="active-menu" linked href="/"><i class="fa fa-home "></i>Home</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user "></i>Personal <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a linked href="#"><i class="fa fa-list-alt"></i>Board</a>
+                            </li>
+                            <li>
+                                <a linked href="#"><i class="fa fa-folder-open-o "></i>Collection</a>
+                            </li>
+                            <li>
+                                <a linked href="#"><i class="fa fa-users "></i>Contact</a>
+                            </li>
+                            <li>
+                                <a linked href="#"><i class="fa fa-cogs "></i>Account</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-anchor "></i>Diving <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a linked href="#"><i class="fa fa-map-marker"></i>Find</a>
+                            </li>
+                            <li>
+                                <a linked href="#"><i class="fa fa-pencil-square-o "></i>Review</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-globe "></i>Encyclopedia <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-bug "></i>Animals <span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a linked href="#"><i class="fa fa-ellipsis-h"></i>River Animals</a>
+                                    </li>
+                                    <li>
+                                        <a linked href="#"><i class="fa fa-ellipsis-v "></i>Saltwater Animals</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-leaf "></i>Vegetables <span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a linked href="#"><i class="fa fa-ellipsis-h"></i>River Vegetables</a>
+                                    </li>
+                                    <li>
+                                        <a linked href="#"><i class="fa fa-ellipsis-v "></i>Saltwater Vegetables</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-archive "></i>Didactic <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a linked href="#"><i class="fa fa-newspaper-o"></i>Theory</a>
+                            </li>
+                            <li>
+                                <a linked href="#"><i class="fa fa-puzzle-piece "></i>Equipment</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-download "></i>Download <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a linked href="#"><i class="fa fa-android"></i>Android</a>
+                            </li>
+                            <li>
+                                <a linked href="#"><i class="fa fa-windows "></i>Windows</a>
+                            </li>
+                            <li>
+                                <a linked href="#"><i class="fa fa-android "></i>Apple</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div id="footer-sec">
+        &copy; @DateTime.Now.Year - Share the blue
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <!-- METISMENU SCRIPTS -->
+    <script src="/assets/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="/assets/js/custom.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul.nav a[linked]").click(function () {
+                $("ul.nav a[linked]").removeClass("active-menu");
+                $(this).addClass("active-menu");
+            });
+        });
+    </script>
+</body>
+</html>

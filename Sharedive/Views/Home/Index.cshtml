@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script type="text/javascript">
+    var app = angular.module("news", []);
+    app.controller("newsController", function ($scope) {
+        $scope.somma = function (x, y, event) {
+            $scope.risultato = x + y;
+        };
+
+        $scope.news = [
+            new News("/Content/Images/Users/Rossella.jpg", "Rossella Rusciano", "This pics is incredible", "/Content/Images/News/download (6).jpg"),
+            new News("/Content/Images/Users/user.jpg", "Nicola Zirilli", "This is better", "/Content/Images/News/images (1).jpg"),
+            new News("/Content/Images/Users/user.jpg", "Nicola Zirilli", "I don't like it", "/Content/Images/News/images.jpg"),
+            new News("/Content/Images/Users/Rossella.jpg", "Rossella Rusciano", "I love blue", "/Content/Images/News/Index.jpg")
+        ];
+
+        $scope.loadNews = function () {
+            var newNews = [
+            new News("/Content/Images/Users/Rossella.jpg", "Rossella Rusciano", "This pics is incredible", "/Content/Images/News/download (6).jpg"),
+            new News("/Content/Images/Users/user.jpg", "Nicola Zirilli", "This is better", "/Content/Images/News/images (1).jpg"),
+            new News("/Content/Images/Users/user.jpg", "Nicola Zirilli", "I don't like it", "/Content/Images/News/images.jpg"),
+            new News("/Content/Images/Users/Rossella.jpg", "Rossella Rusciano", "I love blue", "/Content/Images/News/Index.jpg")
+            ];
+            newNews.forEach(function (entry) {
+                $scope.news.push(entry);
+            });
+        };
+
+        $scope.firstName = "John";
+        $scope.lastName = "Doe";
+    });
+
+    function News() { }
+    function News(iconPath, userName, header, imgPath) {
+        this.iconPath = iconPath;
+        this.userName = userName;
+        this.header = header;
+        this.imgPath = imgPath;
+    }
+
+    News.prototype = {
+        iconPath: "",
+        userName: "",
+        header: "",
+        imgPath: ""
+    }
+</script>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-head-line">NEWS</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div ng-app="news" ng-controller="newsController" class="col-md-8">
+        <div class="panel panel-info" ng-repeat="new in news">
+            <div class="panel-heading">
+                <img src="{{new.iconPath}}" height="20" width="20" class="img-circle" />
+                {{new.userName}}
+            </div>
+            <div class="panel-body">
+                <p>{{new.header}}</p>
+                <div class="col-md-12">
+                    <img src="{{new.imgPath}}" class="img-rounded" alt="Cinque Terre">
+                </div>
+            </div>
+            <div class="panel-footer">
+                <a href="#" class="btn btn-warning" title="Like"><i class="fa fa-thumbs-up"></i></a>
+                <a href="#" class="btn btn-success" title="Share"><i class="fa fa-share-alt"></i></a>
+                <a href="#" class="btn btn-danger" title="Comment"><i class="fa fa-comment"></i></a>
+            </div>
+        </div>
+        <div ng-click="loadNews()" value="Load news..." style="cursor: pointer">
+            Load news...
+        </div>
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Recent Chat History
+            </div>
+            <div class="panel-body" style="padding: 0px;">
+                <div class="chat-widget-main">
+
+
+                    <div class="chat-widget-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                    <div class="chat-widget-name-left">
+                        <h4>Amanna Seiar</h4>
+                    </div>
+                    <div class="chat-widget-right">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                    <div class="chat-widget-name-right">
+                        <h4>Donim Cruseia </h4>
+                    </div>
+                    <div class="chat-widget-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                    <div class="chat-widget-name-left">
+                        <h4>Amanna Seiar</h4>
+                    </div>
+                    <div class="chat-widget-right">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                    <div class="chat-widget-name-right">
+                        <h4>Donim Cruseia </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Message" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button">SEND</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
